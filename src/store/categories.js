@@ -1,3 +1,4 @@
+/* eslint-disable import/no-anonymous-default-export */
 // Shows a list of all categories
 // State should contain a list of categories as well as the active category
 // Each category should have a normalized name, display name, and a description
@@ -31,7 +32,7 @@ export default (state = initialState, action) => {
   let { type, payload } = action;
   switch (type) {
     case 'SWITCH':
-      state.activeCategory = action.payload;
+      state.activeCategory = payload;
       console.log(state);
       return state;
       default:
