@@ -17,9 +17,9 @@ function Categories(props) {
   const loadCategories = () => {
     return props.categories.categoryList.map((category, idx) => (
       <div key={idx}>
-        <h2>{category.displayName}</h2>
+        <h3>{category.displayName}</h3>
         <p>{category.description}</p>
-        <button onClick={() => handleClick(category.name)}>
+        <button className='button' onClick={() => handleClick(category.name)}>
           View this Category
         </button>
       </div>
@@ -28,8 +28,8 @@ function Categories(props) {
 
   return (
     <>
-      <h1>Categories</h1>
       <div id="categories">
+      <h1>Categories</h1>
         {!activeCategory ? loadCategories() : <h2>{activeCategory}</h2>}
       </div>
     </>

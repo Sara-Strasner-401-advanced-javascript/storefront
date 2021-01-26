@@ -11,13 +11,13 @@ function Categories(props) {
 
   return (
     <>
+      <div id="products">
       <h1>Products</h1>
-      <div id="categories">
         {props.products.productList
           ? 
           props.products.productList.map((product, idx) => (
               <div key={idx}>
-                <h2>{product.name}</h2>
+                <h3>{product.name}</h3>
                 <p>{product.description}</p>
                 <p>{product.price}</p>
               </div>
