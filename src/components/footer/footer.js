@@ -1,16 +1,24 @@
-import BottomNavigation from '@material-ui/core/BottomNavigation';
-// import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
+import './footer.scss';
 
 function Footer() {
   return (
-    <BottomNavigation>
-      {/* <BottomNavigation value={value} onChange={handleChange} className={classes.root}> */}
-      {/* <BottomNavigationAction label="Recents" value="recents"/>
-      <BottomNavigationAction label="Favorites" value="favorites" />
-      <BottomNavigationAction label="Nearby" value="nearby" /> */}
-      <p>Here is the footer!</p>
-      {/* <BottomNavigationAction label="Folder" value="folder" /> */}
-    </BottomNavigation>
+    <div className="footer">
+      <footer>
+        <h4>
+        by Sara Strasner |{' '}
+        <a href="https://github.com/sarastrasner" className="text-info">
+          Find me on Github
+        </a>{' '}
+        |{' '}
+        <a
+          href="https://www.linkedin.com/in/sarastrasner/"
+          className="text-info"
+        >
+          Find me on LinkedIn
+        </a>
+        </h4>
+      </footer>
+    </div>
   );
 }
 
