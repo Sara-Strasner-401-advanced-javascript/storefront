@@ -1,13 +1,14 @@
 # LAB 36
 
-## Project: To Storefront
+## Project: Storefront
 
 ### Author: Sara Strasner
 
 ### Links and Resources
 
-- [deployed app](https://codesandbox.io/s/friendly-fog-0do5b?file=/src/components/todo/list.js)
-- [Latest PR](hhttps://github.com/sarastrasner/todo/pull/3)
+- [deployed app](https://codesandbox.io/s/storefront-4cgjr)
+- [Latest PR](https://github.com/sarastrasner/storefront/pull/1)
+
 
 ### Setup
 
@@ -21,7 +22,7 @@
 
 #### UML
 
-![UML](./assets/lab31UML.png)
+![UML](./assets/Lab36UML.png)
 
 
 
