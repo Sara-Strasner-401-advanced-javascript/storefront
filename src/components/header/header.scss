@@ -1,5 +1,15 @@
 .navbar{
   background-color: #2EA69A;
   color: #F2EBEB;
-  padding:0
+  padding:0;
+  #cart{
+    text-align: right;
+    padding-left: 80%;
+    font-size: 1.5em;
+  }
+}
+#cartContent{
+  float: right;
+  padding: 10px;
+  margin: 10px;
 }
