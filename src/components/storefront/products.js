@@ -1,18 +1,26 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { setActiveCategory } from '../../store/categories';
 import { filterProducts, reduceInventory } from '../../store/products';
-import { addToCart } from '../../store/cart'
+import { addToCart } from '../../store/cart';
 
-const mapDispatchToProps = { setActiveCategory, filterProducts, addToCart, reduceInventory };
+const mapDispatchToProps = {
+  setActiveCategory,
+  filterProducts,
+  addToCart,
+  reduceInventory,
+};
 
 function Categories(props) {
-
-  const handleClick = (product) => {
-    console.log(`You added ${product.name} to you cart`)
+  const handleClick = product => {
+    console.log(`You added ${product.name} to you cart`);
     props.addToCart(product);
     props.reduceInventory(product.name);
-  }
+  };
+
+  useEffect(() => {
+    props.getProducts();
+  }, [props]);
 
   return (
     <>
@@ -23,11 +31,10 @@ function Categories(props) {
               <div key={idx}>
                 <h3>{product.name}</h3>
                 <p>{product.description}</p>
-                <p>{product.price} | {product.inventoryCount} in stock </p>
-                <button
-                  className="button"
-                  onClick={() => handleClick(product)}
-                >
+                <p>
+                  {product.price} | {product.inventoryCount} in stock{' '}
+                </p>
+                <button className="button" onClick={() => handleClick(product)}>
                   Add to Cart{' '}
                 </button>{' '}
               </div>

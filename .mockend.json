@@ -1,0 +1,10 @@
+{
+  "Product": {
+    "category": "string",
+    "name": "string",
+    "description": "string",
+    "price": "int",
+    "inventoryCount": "int"
+  }
+
+}
