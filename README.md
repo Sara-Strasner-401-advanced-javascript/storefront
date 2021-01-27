@@ -7,7 +7,7 @@
 ### Links and Resources
 
 - [deployed app](https://codesandbox.io/s/storefront-4cgjr)
-- [Latest PR](https://github.com/sarastrasner/storefront/pull/1)
+- [Latest PR](https://github.com/sarastrasner/storefront/pull/4)
 
 
 ### Setup
