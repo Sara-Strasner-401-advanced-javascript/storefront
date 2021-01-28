@@ -1,5 +1,5 @@
 {
-  "Product": {
+  "product": {
     "category": "string",
     "name": "string",
     "description": "string",
