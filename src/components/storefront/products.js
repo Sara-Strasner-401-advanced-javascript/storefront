@@ -1,7 +1,12 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { setActiveCategory } from '../../store/categories';
-import { filterProducts, reduceInventory } from '../../store/products';
+import {
+  filterProducts,
+  reduceInventory,
+  get,
+  deleteItem,
+} from '../../store/products';
 import { addToCart } from '../../store/cart';
 
 const mapDispatchToProps = {
@@ -9,31 +14,47 @@ const mapDispatchToProps = {
   filterProducts,
   addToCart,
   reduceInventory,
+  get,
+  deleteItem,
 };
 
 function Categories(props) {
+  // console.log(`Here are the props.products: ${props.products}`);
+  // console.log(`Here are the props: ${props}`);
+  console.log(`Here are the props.products.results: ${props.products.results}`);
+
   const handleClick = product => {
     console.log(`You added ${product.name} to you cart`);
     props.addToCart(product);
-    props.reduceInventory(product.name);
+    //props.reduceInventory(product.name);
+  };
+  const handleDelete = product => {
+    props.deleteItem(product);
   };
 
   useEffect(() => {
-    props.getProducts();
-  }, [props]);
+    props.get();
+  }, []);
 
   return (
     <>
       <div id="products">
         <h1>Products</h1>
-        {props.products.productList
-          ? props.products.productList.map((product, idx) => (
+        {props.products.results
+          ? props.products.results.map((product, idx) => (
               <div key={idx}>
-                <h3>{product.name}</h3>
+                <img alt={product.title} width="75px" src={product.image} />
+                <h3>{product.title}</h3>
                 <p>{product.description}</p>
                 <p>
-                  {product.price} | {product.inventoryCount} in stock{' '}
+                  ${product.price} | {product.inventoryCount} in stock{' '}
                 </p>
+                <button
+                  className="button"
+                  onClick={() => handleDelete(product)}
+                >
+                  delete fron inventory
+                </button>
                 <button className="button" onClick={() => handleClick(product)}>
                   Add to Cart{' '}
                 </button>{' '}

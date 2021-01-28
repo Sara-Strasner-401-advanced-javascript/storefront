@@ -21,9 +21,8 @@ function Cart(props) {
       <div id="cartContent">
       {props.cart.length >= 1 ? props.cart.map((item, idx) => (
               <div key={idx}>
-                <h3>{item.name}</h3>
-                <p>{item.description}</p>
-                <p>{item.price}</p>
+                <h3>{item.title}</h3>
+                <p>${item.price}</p>
                 <button onClick={() => handleClick(item)}>Remove from Cart</button>
               </div>
             ))

@@ -1,6 +1,7 @@
 import React from 'react';
 import Categories from './categories'
 import Products from './products'
+import Admin from './admin'
 import './storefront.scss'
 
 function Storefront(props) {
@@ -9,6 +10,7 @@ function Storefront(props) {
     <>
       <Categories />
       <Products />
+      <Admin />
     </>
   );
 }

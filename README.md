@@ -8,6 +8,7 @@
 
 - [deployed app](https://codesandbox.io/s/storefront-4cgjr)
 - [Latest PR](https://github.com/sarastrasner/storefront/pull/4)
+- [API](https://fakestoreapi.com/docs)
 
 
 ### Setup
@@ -23,6 +24,7 @@
 #### UML
 
 ![UML](./assets/Lab36UML.png)
+![UML](./assets/storeFrontDay3UML.png)
 
 
 

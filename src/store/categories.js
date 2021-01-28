@@ -6,13 +6,22 @@ let initialState = {
   activeCategory:null,
   categoryList: [
     {
-      name: 'unicorns',
-      displayName: 'Unicorns',
+      name: 'electronics',
+      displayName: 'electronics',
       description: 'Magical AND cute!',
     },
     {
-      name: 'narwhals',
-      displayName: 'Narwhals',
+      name: 'jewelry',
+      displayName: 'jewelry',
+      description: 'Beautiful undersea unicorns!',
+    },
+    {
+      name: 'men clothing',
+      displayName: 'men clothing',
+      description: 'Beautiful undersea unicorns!',
+    },    {
+      name: 'women clothing',
+      displayName: 'women clothing',
       description: 'Beautiful undersea unicorns!',
     },
   ],
